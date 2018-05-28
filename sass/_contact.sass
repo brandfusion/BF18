@@ -1,0 +1,182 @@
+#contact
+  background-image: url("../img/contact.jpg")
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover
+  font-size: 2rem
+  font-family: "Molde-Light"
+  color: #fff
+  padding: 8rem 0
+  .social-media   
+    list-style-type: none 
+    padding: 0
+    display: flex 
+    flex-wrap: wrap 
+    align-items: center
+    li 
+      margin-right: 1.5rem  
+    path, rect   
+      transition: all 0.15s ease-out
+    a:hover 
+      path, rect 
+        fill: $secondary    
+#contact__top  
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 8rem
+  h6 
+    font-size: 1.6rem
+    font-family: "Molde-Regular"
+    color: $graySecondary
+    font-weight: 400
+  .item 
+    width: 25%
+    a 
+      color: $secondary
+      text-decoration: underline
+      &:hover 
+        color: lighten($secondary, 10)
+#contact__bottom
+  .form__content
+    display: flex 
+    flex-wrap: wrap
+    justify-content: space-between
+    .group 
+      width: calc(50% - 3.5rem)
+  .form   
+    .submit
+      font-size: 3.4rem
+      font-family: "Molde-SemiExpanded-Medium"
+      width: 25.6rem
+      height: 6.4rem
+      display: flex 
+      flex-wrap: wrap
+      align-items: center
+      justify-content: center
+      background-color: $secondary
+      outline: none
+      border: none
+      text-transform: uppercase
+      color: $primary
+      cursor: pointer
+      margin-top: 6.4rem
+      &:hover 
+        background-color: lighten($secondary, 10)
+    header       
+      display: flex 
+      flex-wrap: wrap 
+      justify-content: space-between
+      margin-bottom: 6rem
+      h5 
+        font-size: 5.7rem
+        font-family: "Molde-SemiCondensed-BoldReverse"
+      .subtitle 
+        font-size: 34px
+        font-family: "Molde-SemiExpanded-Medium"  
+        color: $secondary
+      .left
+        width: calc(50% - 3.5rem)
+      .right
+        width: calc(50% - 3.5rem)  
+    .input-text, .select-text
+      margin-bottom: 2.5rem    
+    input
+      font-weight: 400
+      font-family: "Molde-Light" 
+      border-bottom: 1px solid #b7c6ce50  
+      width: 100% 
+    .placeholder
+      font-size: 2rem
+      color: #b7c6ce
+      font-family: "Molde-Light"
+
+.select-text  
+  font-size: 2.6rem
+  font-family: "Molde-Regular"
+  position: relative  
+  z-index: 1
+  .selection-trigger
+    background-color: transparent 
+    border: none 
+    outline: none
+    position: absolute 
+    right: 1rem
+    top: 0
+    cursor: pointer
+    svg 
+      opacity: 0.5
+      transition: all 0.15s ease-out
+      transform-origin: center
+    &:hover 
+      svg
+        opacity: 1
+        polygon
+          stroke: $secondary
+    &.active 
+      svg 
+        transform: rotate(180deg)      
+
+  .select-options 
+    background-color: #ffffff10
+    width: 100%
+    padding: 0.8rem
+    border: 1px solid #b7c6ce50
+    border-top: none
+    ul 
+      list-style-type: none 
+      padding: 0
+      margin: 0
+      li 
+        font-size: 2rem
+        font-family: "Molde-Light"
+        line-height: 3.2rem
+        color: #b7c6ce
+        cursor: pointer
+        &:hover 
+          color: $secondary
+
+       
+  .placeholder
+    position: absolute
+    left: 0
+    z-index: -1   
+    transition: all 0.2s ease-in-out
+    transform-origin: 0 0
+    transform: scale(1)
+    &.on        
+      transform: scale(0.5)
+      top: -1.5rem
+  input
+    font-size: inherit
+    font-family: inherit
+    background-color: transparent 
+    border: 0
+    border-bottom: 2px solid $primary
+    outline: none     
+    color: $secondary
+.textarea-text 
+  font-size: 2.6rem
+  font-family: "Molde-Regular"
+  position: relative  
+  z-index: 1
+  .placeholder
+    position: absolute
+    left: 0
+    z-index: -1   
+    transition: all 0.2s ease-in-out
+    transform-origin: 0 0
+    transform: scale(1)
+    &.on        
+      transform: scale(0.5)
+      top: -1.5rem
+  textarea
+    font-size: inherit
+    min-height: 14rem
+    width: 100%
+    font-family: inherit
+    background-color: transparent 
+    border: 0
+    border-bottom: 1px solid #b7c6ce50
+    outline: none     
+    color: $secondary  
+    font-family: "Molde-Light"   

@@ -1,0 +1,133 @@
+.list--header
+  background-image: url("../img/banner.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top center
+  .container 
+    height: 38.4rem
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+  h2 
+    font-size: 5.7rem
+    color: #ffffff   
+    font-family: "Molde-SemiCondensed-BoldReverse"
+    padding-top: 6rem
+    margin-left: 8rem
+    margin-bottom: 6rem
+    text-transform: uppercase   
+.list--work
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  .item
+    position: relative
+    margin-bottom: 1.5rem
+    width: 100%
+    .front
+      img 
+        width: 100%   
+      .overlay 
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        font-size: 2.6rem
+        font-family: "Molde-Regular"
+        color: #fff
+        padding: 4.8rem
+        h3
+          font-size: inherit
+          font-family: inherit
+          font-weight: 400
+          margin-bottom: 3.2rem
+          line-height: 1
+        p 
+          max-width: 30.4rem  
+          margin-bottom: 3.2rem       
+    .back
+      position: absolute
+      left: 1.6rem
+      right: 1.6rem
+      bottom: 1.6rem
+      top: 1.6rem   
+      background-color: $primary
+      opacity: 0.9
+      font-size: 2.6rem
+      font-family: "Molde-Regular"
+      color: #fff
+      padding: 3.2rem
+      opacity: 0
+      // transform: scale(0.99)
+      transition: all 0.3s ease-out
+      .brand 
+        font-size: inherit
+        font-family: inherit
+        font-weight: 400
+        margin-bottom: 3.2rem
+        line-height: 1
+      p 
+        max-width: 30.4rem  
+        margin-bottom: 3.2rem
+      a         
+        @extend .link--red  
+        font-size: 1.6rem
+    &:hover
+      .back
+        opacity: 0.9
+        // transform: scale(1)
+  .item--full
+    @extend .item
+  .item--half
+    @extend .item    
+    width: calc(50% - 0.75rem)    
+.list--work__next
+  @extend .link--red
+  font-size: 2.8rem
+  font-family: "Molde-Regular"    
+  height: 8.8rem
+  padding-left: 5.8rem
+  width: 80rem
+  background-color: #ffffff
+  line-height: 8.8rem
+.modifier--work
+  background-color: $gray
+
+#filters
+  font-size: 2.6rem
+  font-family: "Molde-Regular"
+  color: $primary
+  display: flex 
+  flex-wrap: wrap
+  .container 
+    padding: 3.2rem 6rem  
+    div 
+      display: inline-flex
+      margin-left: 3.2rem
+.input-text
+  font-size: 2.6rem
+  font-family: "Molde-Regular"
+  position: relative  
+  z-index: 1
+  .placeholder
+    position: absolute
+    left: 0
+    z-index: -1   
+    transition: all 0.2s ease-in-out
+    transform-origin: 0 0
+    transform: scale(1)
+    &.on        
+      transform: scale(0.5)
+      top: -1.5rem
+  input
+    font-size: inherit
+    font-family: inherit
+    background-color: transparent 
+    border: 0
+    border-bottom: 2px solid $primary
+    outline: none     
+    color: $secondary
+    // &:focus 
+    //   border-color: $secondary 

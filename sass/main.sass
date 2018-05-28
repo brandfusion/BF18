@@ -1,0 +1,428 @@
+@import "fonts"
+@import "variables"
+@import "mixins"
+@import "work-list"
+@import "work-detail"
+@import "contact"
+
+*
+  box-sizing: border-box
+html 
+  font-size: 62.5%  
+  margin: 0
+  padding: 0
+body 
+  margin: 0  
+  padding: 0
+img 
+  display: block
+img  
+  max-width: 100%
+  max-height: 100% 
+a 
+  text-decoration: none 
+  transition: all 0.15s ease-out
+  outline: none
+  display: inline-block
+p 
+  line-height: 1.4  
+  margin: 0 0 0.5rem
+h1, h2, h3, h4, h5, h6 
+  margin-bottom: 1rem
+  margin-top: 0 
+body 
+  font-family: "Molde-Regular", sans-serif
+.h2
+  font-size: 5.7rem
+  color: #ffffff   
+  font-family: "Molde-SemiCondensed-BoldReverse"
+  padding-top: 6rem
+  margin-left: 8rem
+  margin-bottom: 6rem
+  text-transform: uppercase       
+.hidden
+  display: none  
+.slick-arrow:before 
+  display: none
+.slick-dots 
+  bottom: 1rem
+.slick-dots li button:before    
+  color: #fff
+  opacity: 1
+  content: ""
+  background-color: #fff 
+  width: 1rem
+  height: 1rem
+  border-radius: 100%
+.slick-dots li.slick-active button:before
+  color: $primary  
+  opacity: 1  
+  background-color: $primary   
+.link 
+  color: $primary
+  &:hover 
+    color: $secondary  
+.link--red
+  color: $secondary
+  transition: all 0.15s ease-out
+  svg
+    transition: all 0.15s ease-out
+  &:hover
+    color: lighten($secondary, 10% )
+    line 
+      stroke: lighten($secondary, 10% )
+    polygon
+      fill: lighten($secondary, 10% )  
+    svg 
+      transform: translateX(0.5rem)
+#header 
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  height: 8rem
+  padding: 0 8rem
+  background-color: #fff
+#logo
+  a
+    height: 2.2rem
+#navigation--main
+  display: flex 
+  flex-wrap: wrap
+  a 
+    font-family: "Molde-SemiCondensed-Bold", sans-serif
+    font-weight: 400
+    font-size: 1.8rem
+    margin-left: 2rem    
+    @extend .link
+#slider--main       
+  .item 
+    min-height: 85vh
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    color: #fff
+    align-items: center
+    display: flex !important
+  h2 
+    font-size: 4.5rem
+    font-family: "Molde-SemiExpanded-Regular", sans-serif    
+    font-weight: 400
+    line-height: 1
+  h3 
+    font-size: 15.2rem
+    font-family: "Molde-BoldReverse", sans-serif
+    font-weight: 400  
+    line-height: 1
+  p 
+    font-size: 2.6rem
+    font-family: "Molde-Light", sans-serif   
+    font-weight: 400
+    margin: 5rem 0
+    line-height: 1.2
+  a 
+    font-size: 2.6rem
+    font-family: "Molde-Light", sans-serif   
+    font-weight: 400   
+.container 
+  @media (min-width: 1500px)
+    width: 1500px
+    margin: 0 auto
+.slick-slider  
+  .slick-arrow 
+    background-color: transparent 
+    outline: none
+    border: none
+    height: 62px
+    width: 62px
+    position: absolute 
+    top: 50%
+    margin-top: -31px
+    cursor: pointer
+    z-index: 2
+    line, polygon, circle 
+      transition: all 0.15s ease-out
+    &:hover
+      circle
+        stroke: lighten($secondary, 10%)
+      line   
+        stroke: lighten($secondary, 10%)
+      polygon
+        fill: lighten($secondary, 10%)
+    svg 
+      width: 100%
+      height: 100%
+    &.slick-prev:hover
+      line, polygon 
+        transform-origin: center
+        transform: translateX(-0.5rem)
+      circle
+        opacity: 0   
+    &.slick-next:hover
+      line, polygon 
+        transform-origin: center
+        transform: translateX(-0.5rem)
+      circle
+        opacity: 0  
+    &.slick-prev
+      left: 0    
+    &.slick-next
+      right: 0
+      svg 
+        transform: rotateY(180deg)   
+#slider--main__wrapper
+  position: relative
+  .more 
+    background-color: transparent
+    border: none
+    outline: none
+    position: absolute 
+    bottom: 2rem
+    color: #fff
+    font-size: 1.6rem
+    font-family: "Molde-Medium"
+    width: 12rem
+    text-align: center 
+    display: flex 
+    flex-wrap: wrap 
+    align-items: center
+    justify-content: center
+    left: 50%
+    margin-left: -6rem
+    cursor: pointer
+    span 
+      display: block
+      margin-bottom: 0.8rem
+#navigation--homepage, #navigation--project
+  background-color: #fff
+  position: relative 
+  z-index: 99
+  &.sticky
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0 8rem
+    height: 9rem
+    align-items: center
+  a 
+    font-size: 2.6rem
+    font-family: "Molde-Light"
+    color: #a5acb1        
+    &:hover, &.active 
+      color: $primary
+#whyus,#personalbranding 
+  background-color: $gray
+  padding: 16rem 8rem
+  color: $primary
+  h2 
+    font-size: 5.7rem
+    font-family: "Molde-SemiCondensed-BoldReverse"
+    margin-left: 8rem
+    margin-bottom: 6rem
+    text-transform: uppercase
+  .content 
+    margin-left: 24rem  
+    max-width: 66.4rem
+  p 
+    margin-bottom: 3.2rem  
+  p:first-child
+    font-size: 3.6rem
+    font-family: "Molde-SemiCondensed-Bold"  
+  p:nth-child(2)
+    font-size: 2.6rem
+    font-family: "Molde-Regular"
+  p:nth-child(3)
+    font-size: 2rem
+    font-family: "Molde-Light"  
+#whatwedo
+  padding: 16rem 8rem
+  color: $primary
+  h2 
+    font-size: 5.7rem
+    font-family: "Molde-SemiCondensed-BoldReverse"
+    margin-left: 8rem
+    text-transform: uppercase
+    margin-bottom: 6rem
+  .content 
+    margin-left: 24rem  
+    max-width: 66.4rem
+    display: flex
+    flex-wrap: wrap
+    h3 
+      font-size: 3.6rem
+      font-family: "Molde-SemiCondensed-Bold"  
+      margin-bottom: 6rem
+    .item 
+      width: 50%  
+    li 
+      font-size: 2rem
+      font-family: "Molde-Light" 
+    ul 
+      list-style-type: none
+      padding: 0px
+      li 
+        margin-bottom: 0.4rem 
+        &:before        
+          content: "/"
+          margin-right: 0.2rem
+.slider--content
+  polygon
+    fill: #ffffff
+  circle, line 
+    stroke: #fff  
+  .item 
+    min-height: 100vh
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    color: #fff
+    align-items: center
+    display: flex !important
+    padding: 8rem 0
+  .content 
+    margin-left: 24rem  
+    max-width: 66.4rem
+    display: flex
+    flex-wrap: wrap  
+  h2 
+    font-size: 5.7rem
+    font-family: "Molde-SemiCondensed-BoldReverse", sans-serif    
+    font-weight: 400
+    line-height: 1
+    margin-bottom: 8rem
+    margin-left: 6rem
+  h3 
+    font-size: 6.7rem
+    font-family: "Molde-Semibold", sans-serif
+    font-weight: 400  
+    line-height: 1
+    margin-bottom: 8rem
+  p 
+    font-size: 2.6rem
+    font-family: "Molde-Light", sans-serif   
+    font-weight: 400   
+    line-height: 1.2
+  a 
+    font-size: 2.6rem
+    font-family: "Molde-Light", sans-serif   
+    font-weight: 400   
+  .slick-arrow
+    &:hover
+      circle
+        stroke: #fff
+      line   
+        stroke: #fff
+      polygon
+        fill: #fff  
+#ourteam  
+  padding: 16rem 8rem
+  color: $primary
+  .content
+      display: flex
+      flex-wrap: wrap      
+      justify-content: space-between  
+  .item 
+      width: calc(33.333333% - 10px)
+  h2 
+    font-size: 5.7rem
+    font-family: "Molde-SemiCondensed-BoldReverse"
+    margin-left: 8rem
+    margin-bottom: 6rem
+    text-transform: uppercase 
+  ul 
+    list-style-type: none
+    padding: 0
+  .image
+    margin-bottom: 2.4rem  
+    ul
+      width: 100%
+      img 
+        width: 100%
+  .name 
+    font-size: 3.2rem
+    font-family: "Molde-SemiCondensed-Bold"
+    color: $secondary
+    margin-bottom: 0
+    line-height: 1
+  .title  
+    color: $primary
+    font-size: 2rem
+    font-family: "Molde-Light"
+#brands
+  background-color: #a7acb2
+  h2 
+    font-size: 5.7rem
+    color: #ffffff   
+    font-family: "Molde-SemiCondensed-BoldReverse"
+    padding-top: 6rem
+    margin-left: 8rem
+    margin-bottom: 6rem
+    text-transform: uppercase     
+#footer 
+  height: 16rem
+  align-content: center
+  display: flex 
+  flex-wrap: wrap
+  p 
+    display: inline-block
+  .content
+    display: flex 
+    flex-wrap: wrap
+    font-size: 1.6rem
+    font-family: "Molde-Light"             
+    justify-content: space-between
+    padding: 0 8rem    
+    width: 100%
+    align-self: center
+    align-items: center
+    .info 
+      p 
+        margin-right: 16rem
+        color: #a5acb1
+        &:last-child
+          margin-right: 0
+      button 
+        color: #a5acb1
+        background-color: transparent 
+        border: none 
+        outline: none
+        cursor: pointer
+        font-size: 1.6rem
+        font-family: "Molde-Light" 
+        sup 
+          transition: all 0.15s ease-out
+        &:hover 
+          sup 
+            color: $secondary    
+    ul 
+      display: flex 
+      flex-wrap: wrap
+      list-style-type: none 
+      li 
+        margin-left: 2rem
+        a 
+          color: #a5acb1
+          font-family: "Molde-Light" 
+          font-size: 1.6rem
+          &:hover 
+            color: $secondary
+#goTop 
+  background-color: transparent 
+  border: none
+  outline: none
+  position: fixed
+  right: 5rem
+  bottom: 8rem
+  cursor: pointer
+  transition: all 0.15s ease-out
+  &:hover 
+    polygon 
+      fill: $secondary
+
+
+ 
