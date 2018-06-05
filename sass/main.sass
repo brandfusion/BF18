@@ -4,9 +4,12 @@
 @import "work-list"
 @import "work-detail"
 @import "contact"
-
+@import "person"
 *
   box-sizing: border-box
+*
+  min-height: 0
+  min-width: 0
 html 
   font-size: 62.5%  
   margin: 0
@@ -165,9 +168,9 @@ body
       circle
         opacity: 0  
     &.slick-prev
-      left: 0    
+      left: 4rem    
     &.slick-next
-      right: 0
+      right: 4rem
       svg 
         transform: rotateY(180deg)   
 #slider--main__wrapper
@@ -326,8 +329,26 @@ body
       display: flex
       flex-wrap: wrap      
       justify-content: space-between  
+  .overlay
+    display: none
+    position: absolute 
+    right: 0 
+    top: 0
+    a 
+      background-color: #a5acb1    
+      display: flex 
+      flex-wrap: wrap 
+      width: 7rem
+      height: 7rem
+      align-items: center 
+      justify-content: center 
+      margin-bottom: 1rem             
   .item 
-      width: calc(33.333333% - 10px)
+      width: calc(33.333330% - 10px)
+      position: relative
+      &:hover  
+        .overlay 
+          display: block
   h2 
     font-size: 5.7rem
     font-family: "Molde-SemiCondensed-BoldReverse"
@@ -336,6 +357,7 @@ body
     text-transform: uppercase 
   ul 
     list-style-type: none
+    margin: 0
     padding: 0
   .image
     margin-bottom: 2.4rem  
@@ -346,9 +368,11 @@ body
   .name 
     font-size: 3.2rem
     font-family: "Molde-SemiCondensed-Bold"
-    color: $secondary
+    color: $primary
     margin-bottom: 0
     line-height: 1
+    &:hover
+      color: $secondary
   .title  
     color: $primary
     font-size: 2rem
@@ -423,6 +447,313 @@ body
   &:hover 
     polygon 
       fill: $secondary
+#facts 
+  padding: 6rem 0
+  h2 
+    font-size: 4.5rem
+    font-family: "Molde-SemiExpanded-Regular"
+    color: $primary
+  .container 
+    display: flex 
+    flex-wrap: wrap 
+    justify-content: center
+  .content 
+    display: block  
+    padding: 3.5rem 0
+  .item
+    // max-width: 40rem
+    text-align: center 
+    p 
+      font-size: 2.6rem
+      color: $primary
+      font-family: "Molde-Regular"
 
+  .loader
+    svg 
+      background-color: #ebebeb   
+    polygon       
+      transform: rotateZ(-32deg)
+      transform-origin: center   
+    &.animation 
+      polygon          
+        &:nth-child(1)
+          animation: poly1 6.6s linear normal forwards      
+        &:nth-child(2)
+          // transform: rotateZ(30deg)
+          animation: poly2 6.6s linear normal forwards
+        &:nth-child(3)
+          animation: poly3 6.6s linear normal forwards
+          // transform: rotateZ(60deg)  
+        &:nth-child(4)
+          // transform: rotateZ(90deg)  
+          animation: poly4 6.6s linear normal forwards
+        &:nth-child(5)
+          // transform: rotateZ(120deg)   
+          animation: poly5 6.6s linear normal forwards
+        &:nth-child(6)
+          // transform: rotateZ(150deg)
+          animation: poly6 6.6s linear normal forwards
+        &:nth-child(7)
+          // transform: rotateZ(180deg)  
+          animation: poly7 6.6s linear normal forwards
+        &:nth-child(8)
+          animation: poly8 6.6s linear normal forwards
+          // transform: rotateZ(210deg)  
+        &:nth-child(9)
+          animation: poly9 6.6s linear normal forwards
+        &:nth-child(10)
+          animation: poly10 6.6s linear normal forwards
+        &:nth-child(11)
+          animation: poly11 6.6s linear normal forwards    
+            // transform: rotateZ(240deg)    
+.paragraph--two-columns
+  padding: 5.5rem 0
+  .container
+    display: flex 
+    flex-wrap: wrap
+    justify-content: center
+  .content 
+    display: flex
+    justify-content: center
+    color: $primary
+    font-size: 2rem
+    font-family: "Molde-Light"
+    max-width: 96rem
+    column-count: 2          
+    p 
+      padding: 0 0.75rem   
+.banner-with-text--overlay
+  position: relative
+  .overlay 
+    position: absolute 
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    display: flex 
+    flex-wrap: wrap
+    justify-content: center 
+    align-items: center 
+    color: #fff 
+    font-size: 4.5rem
+    font-family: "Molde-SemiExpanded-Regular"
+    text-align: center
+#workwithus
+  background-color: $primary
+  color: #fff 
+  padding: 6.6rem 0
+  .content
+    justify-content: flex-end
+    display: flex 
+    flex-wrap: wrap
+    max-width: 66rem
+    margin-right: 6rem
+  .container 
+    display: flex     
+    align-items: center
+  .bold 
+    font-size: 5.7rem
+    font-family: "Molde-SemiCondensed-BoldReverse"
+    color: #fff 
+  p 
+    font-family: "Molde-SemiExpanded-Medium"
+    font-size: 3.4rem            
+    color: $secondary
+    margin-bottom: 1.6rem
+    line-height: 1
+  svg 
+    path, polygon, line 
+      transition: all 0.15s ease-in-out
 
- 
+  a:hover 
+    svg 
+      path
+        fill: lighten($secondary, 10)
+        //stroke: $secondary
+      // polygon
+      //   fill: $secondary  
+      // line 
+      //   stroke: $secondary  
+
++keyframes(poly1)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(0deg)
++keyframes(poly2)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg)  
+  100%
+    transform: rotateZ(30deg)    
++keyframes(poly3)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg)    
+  100%
+    transform: rotateZ(60deg)   
++keyframes(poly4)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)      
+  100%
+    transform: rotateZ(90deg)           
++keyframes(poly5)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)       
+  100%
+    transform: rotateZ(120deg)  
++keyframes(poly6)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)    
+  60%
+    transform: rotateZ(150deg)         
+  100%
+    transform: rotateZ(150deg)  
++keyframes(poly7)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)    
+  60%
+    transform: rotateZ(150deg) 
+  70%
+    transform: rotateZ(180deg)           
+  100%
+    transform: rotateZ(180deg)      
++keyframes(poly8)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)    
+  60%
+    transform: rotateZ(150deg) 
+  70%
+    transform: rotateZ(180deg)
+  80%    
+    transform: rotateZ(210deg)             
+  100%
+    transform: rotateZ(210deg)         
++keyframes(poly9)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)    
+  60%
+    transform: rotateZ(150deg) 
+  70%
+    transform: rotateZ(180deg)
+  80%    
+    transform: rotateZ(210deg)     
+  90%    
+    transform: rotateZ(240deg)           
+  100%
+    transform: rotateZ(240deg)              
++keyframes(poly10)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)    
+  60%
+    transform: rotateZ(150deg) 
+  70%
+    transform: rotateZ(180deg)
+  80%    
+    transform: rotateZ(210deg)     
+  90%    
+    transform: rotateZ(270deg)           
+  100%
+    transform: rotateZ(270deg)                    
++keyframes(poly11)
+  0%
+    transform: rotateZ(-32deg)
+  10%
+    transform: rotateZ(0deg)
+  20%
+    transform: rotateZ(30deg) 
+  30%
+    transform: rotateZ(60deg) 
+  40%
+    transform: rotateZ(90deg)  
+  50%
+    transform: rotateZ(120deg)    
+  60%
+    transform: rotateZ(150deg) 
+  70%
+    transform: rotateZ(180deg)
+  80%    
+    transform: rotateZ(210deg)     
+  90%    
+    transform: rotateZ(270deg)           
+  100%
+    transform: rotateZ(300deg)                    
+
