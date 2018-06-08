@@ -3,10 +3,10 @@
     width: 100%
     
 .articles
-.container
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
 
 .articles
   .item--full
@@ -15,17 +15,17 @@
     justify-content: space-between
 
 .articles
-.item--half
+  .item--half
     width: calc(50% - 0.75rem)
     margin-bottom: 1.5rem
     background-color: $white
 
 .articles
-.item--half_wrapper
-  padding: 4.8rem
+  .item--half_wrapper
+    padding: 4.8rem
 
 .articles
- .item--half-top
+  .item--half-top
     width: 50%
 
 .articles
@@ -64,3 +64,37 @@
     height: inherit
     width: auto
     line-height: normal
+
+@media only screen and (max-width: 1200px)
+  .articles
+    .item--half
+      width: 100%
+
+  .articles
+    .item--half.outside-box
+      margin-bottom: 0
+
+@media only screen and (max-width: 480px)
+  .list--header h2
+    padding-top: 0rem
+    margin-left: 3rem
+    font-size: 5rem
+  
+  .articles 
+    h3
+      font-size: 3.5rem
+
+  .articles
+    .item--half_wrapper
+      padding: 3rem
+  
+  .articles 
+    p
+      margin-bottom: 3rem
+      padding-right: 18%
+    
+  .list--work__next 
+    width: 100%
+    padding-left: 2.5rem
+    font-size: 2.4rem
+  
