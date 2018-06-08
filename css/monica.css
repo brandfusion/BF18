@@ -1,0 +1,178 @@
+body {
+    font-sized: 16px;
+}
+
+.article-body,
+#footer .article-footer {
+    background-color: #F7F7F7;
+}
+
+/* TEXT AND FONTS */
+
+.article-container p,
+.popular-articles-container p {
+    font-size: 2.6rem;
+    
+}
+
+.article-container p,
+.content h3,
+.popular-articles-container h3,
+.popular-articles-container p {
+    font-family: "Molde-Regular";
+    color: #400099;
+}
+
+.content h3,
+.popular-articles-container h3 {
+    font-size: 3.6rem;
+}
+
+.headline {
+    font-size: 4.8rem;
+    font-family: "Molde-SemiCondensed-Bold";
+    color: #400099;
+    margin-bottom: 4.2rem;
+    text-transform: uppercase;
+}
+
+
+/* ARTICLE HEADER */
+
+.article-image {
+    display: block;
+    /* position: relative;
+		top: 0;
+		left: 0; */
+}
+
+
+.article-image img {
+    width: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ARTICLE BODY */
+
+.article-container,
+.popular-articles-container {
+    width: 80%;
+    max-width: 1500px;    
+    margin: auto;
+}
+
+.article-container {
+    background-color: white;
+    position: relative;
+    z-index: 100;
+    margin-top: -30rem;
+}
+
+.article-container article {
+    padding: 6rem;
+}
+
+.article-wrapper div, .headline {
+    width: 66.66%;
+
+}
+.article-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* ARTICLE SIDE COLUMN */
+
+.article-wrapper section {
+    width: 30%;   
+}
+
+
+section p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin: 0;
+    padding-left: 3rem;
+}
+
+/* POPULAR ARTICLES SECTION */
+
+.popular-articles-container,
+.popular-articles-container span {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+.popular-articles-container div {
+    width: 49.5%;
+    background-color: white;
+}
+
+.popular-articles-container h3 {
+    padding: 1rem 5rem;
+}
+
+.popular-articles-container p {
+    padding: 2rem 5rem 2rem 5rem;
+}
+
+
+.popular-articles-container span p {
+    color: #65606059;
+    font-family: "Molde-Regular";
+    font-size: 2rem;
+    padding-right: 5rem;
+}
+
+.popular-articles-container div .read-more {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.popular-articles-container .list--work__next
+
+/* FOOTER */
+
+#footer .article-footer  {
+    width: 100%;
+    margin: 0;
+    padding: 0 10%;
+}
+
+
+ #footer .article-nws {
+    background-color: white;
+    height: 15rem;
+    width: 80%;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+#footer .article-nws input {
+    width: 80%;
+    border-style: none none solid none;  
+    border-color: #a5acb1;
+    color: #a5acb1;
+    font-size: 1.5rem;
+    height: 5rem;
+}
+
+#footer .article-nws button {
+    width: 18%;
+    padding: 0;
+    border: none;
+    background-color: #a5acb1;
+    color: white;
+    height: 5rem;
+    font-size: 2rem;
+}
