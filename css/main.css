@@ -194,6 +194,9 @@
     font-size: 2rem;
     font-family: "Molde-Light"; }
 
+.list--images img {
+  width: 100%; }
+
 .list--images .container {
   display: flex;
   flex-wrap: wrap;
@@ -205,19 +208,19 @@
 .list--images .item--half {
   width: 50%; }
 
-.list--images--homepage img {
+.list--images--spacing img {
   width: 100%; }
 
-.list--images--homepage .container {
+.list--images--spacing .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
-.list--images--homepage .item--full {
+.list--images--spacing .item--full {
   width: 100%;
   margin-bottom: 1.5rem; }
 
-.list--images--homepage .item--half {
+.list--images--spacing .item--half {
   width: calc(50% - 0.75rem);
   margin-bottom: 1.5rem; }
 
@@ -687,6 +690,164 @@
     padding-left: 2.5rem;
     font-size: 2.4rem; } }
 
+body {
+  font-sized: 16px; }
+
+.article-body, #footer .article-footer {
+  background-color: #eaeaea; }
+
+/* TEXT AND FONTS */
+.article-container p, .popular-articles-container p {
+  font-size: 2.6rem; }
+
+.article-container .content p, .article-container .content h3 {
+  font-family: "Molde-Regular";
+  color: #400099; }
+
+.popular-articles-container h3, .popular-articles-container p {
+  font-family: "Molde-Regular";
+  color: #400099; }
+
+.content h3, .popular-articles-container h3 {
+  font-size: 3.6rem; }
+
+.headline {
+  font-size: 4rem;
+  font-family: "Molde-SemiCondensed-Bold";
+  color: #400099;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+  font-style: italic; }
+
+.article-container p {
+  margin-bottom: 3rem; }
+
+.article-container h3 {
+  margin-bottom: 3rem;
+  padding-top: 2rem; }
+
+.article-image {
+  display: block; }
+  .article-image img {
+    width: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto; }
+
+.article-container, .popular-articles-container {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto 2rem auto; }
+
+.article-container {
+  background-color: white;
+  position: relative;
+  z-index: 100;
+  margin-top: -30rem; }
+  .article-container article {
+    padding: 2rem 6rem; }
+
+.article-wrapper div, .headline {
+  width: 66.66%; }
+
+.article-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%; }
+  .article-wrapper .content {
+    padding-bottom: 4rem; }
+  .article-wrapper section {
+    width: 30%; }
+
+section p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin: 0;
+  padding-left: 3rem; }
+
+.popular-articles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 6rem; }
+  .popular-articles-container img {
+    margin-bottom: 2rem;
+    width: 100%; }
+  .popular-articles-container article {
+    padding: 0 5rem; }
+  .popular-articles-container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6rem; }
+  .popular-articles-container .wrap {
+    width: 49.5%;
+    background-color: white; }
+  .popular-articles-container h3 {
+    padding-bottom: 2rem; }
+  .popular-articles-container header p {
+    color: #65606059;
+    font-family: "Molde-Regular";
+    font-size: 2rem; }
+  .popular-articles-container p {
+    padding: 0; }
+  .popular-articles-container div .read-more {
+    color: red;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: visible;
+    padding-right: 6rem; }
+  .popular-articles-container .list--work__next {
+    padding: 0;
+    cursor: pointer;
+    line-height: 7.8rem;
+    font-size: 1.5rem;
+    width: 100%; }
+
+#footer .article-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0 10%; }
+  #footer .article-footer .content {
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 0; }
+    #footer .article-footer .content .info {
+      justify-content: space-around; }
+    #footer .article-footer .content ul {
+      padding: 0; }
+
+#footer .article-nws {
+  background-color: white;
+  height: 15rem;
+  width: 80%;
+  margin: auto;
+  padding-top: 5rem; }
+  #footer .article-nws .subscr-form {
+    display: flex;
+    justify-content: space-between; }
+  #footer .article-nws input {
+    width: 80%;
+    border-style: none none solid none;
+    border-color: #a4abb1;
+    color: #a4abb1;
+    font-size: 1.5rem;
+    height: 5rem; }
+  #footer .article-nws button {
+    width: 18%;
+    padding: 0;
+    border: none;
+    background-color: #a4abb1;
+    color: white;
+    height: 5rem;
+    font-size: 2rem;
+    cursor: pointer; }
+
 * {
   box-sizing: border-box; }
 
@@ -901,83 +1062,84 @@ body {
       display: block;
       margin-bottom: 0.8rem; }
 
-#navigation--homepage, #navigation--project {
+#navigation--anchor {
   background-color: #fff;
   position: relative;
   z-index: 99; }
-  #navigation--homepage.sticky, #navigation--project.sticky {
+  #navigation--anchor.sticky {
     position: fixed;
     top: 0;
     left: 0;
     right: 0; }
-  #navigation--homepage .container, #navigation--project .container {
+  #navigation--anchor .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 8rem;
     height: 9rem;
     align-items: center; }
-  #navigation--homepage a, #navigation--project a {
+  #navigation--anchor a {
     font-size: 2.6rem;
     font-family: "Molde-Light";
     color: #a5acb1; }
-    #navigation--homepage a:hover, #navigation--homepage a.active, #navigation--project a:hover, #navigation--project a.active {
+    #navigation--anchor a:hover, #navigation--anchor a.active {
       color: #400099; }
 
-#whyus, #personalbranding {
-  background-color: #ebebeb;
+.paragraph--content {
   padding: 16rem 8rem;
   color: #400099; }
-  #whyus h2, #personalbranding h2 {
+  .paragraph--content h2 {
     font-size: 5.7rem;
     font-family: "Molde-SemiCondensed-BoldReverse";
     margin-left: 8rem;
     margin-bottom: 6rem;
     text-transform: uppercase; }
-  #whyus .content, #personalbranding .content {
+  .paragraph--content h3 {
+    font-size: 3.6rem; }
+  .paragraph--content .content {
     margin-left: 24rem;
     max-width: 66.4rem; }
-  #whyus p, #personalbranding p {
+  .paragraph--content p {
     margin-bottom: 3.2rem; }
-  #whyus p:first-child, #personalbranding p:first-child {
+  .paragraph--content p:first-child {
     font-size: 3.6rem;
     font-family: "Molde-SemiCondensed-Bold"; }
-  #whyus p:nth-child(2), #personalbranding p:nth-child(2) {
+  .paragraph--content .content-text-featured p {
     font-size: 2.6rem;
     font-family: "Molde-Regular"; }
-  #whyus p:nth-child(3), #personalbranding p:nth-child(3) {
+  .paragraph--content .content-text p {
     font-size: 2rem;
     font-family: "Molde-Light"; }
 
-#whatwedo {
+.paragraph--list {
   padding: 16rem 8rem;
   color: #400099; }
-  #whatwedo h2 {
+  .paragraph--list h2 {
     font-size: 5.7rem;
     font-family: "Molde-SemiCondensed-BoldReverse";
     margin-left: 8rem;
     text-transform: uppercase;
     margin-bottom: 6rem; }
-  #whatwedo .content {
-    margin-left: 24rem;
+  .paragraph--list .content {
+    margin-left: 27rem;
     max-width: 66.4rem;
     display: flex;
     flex-wrap: wrap; }
-    #whatwedo .content h3 {
+    .paragraph--list .content h3 {
       font-size: 3.6rem;
       font-family: "Molde-SemiCondensed-Bold";
       margin-bottom: 6rem; }
-    #whatwedo .content .item, #whatwedo .content .list--work .item--full, .list--work #whatwedo .content .item--full, #whatwedo .content .list--work .item--half, .list--work #whatwedo .content .item--half {
+    .paragraph--list .content .item, .paragraph--list .content .list--work .item--full, .list--work .paragraph--list .content .item--full, .paragraph--list .content .list--work .item--half, .list--work .paragraph--list .content .item--half {
       width: 50%; }
-    #whatwedo .content li {
+    .paragraph--list .content li {
       font-size: 2rem;
       font-family: "Molde-Light"; }
-    #whatwedo .content ul {
+    .paragraph--list .content ul {
       list-style-type: none;
       padding: 0px; }
-      #whatwedo .content ul li {
+      .paragraph--list .content ul li {
         margin-bottom: 0.4rem; }
-        #whatwedo .content ul li:before {
+        .paragraph--list .content ul li:before {
           content: "/";
           margin-right: 0.2rem; }
 
@@ -986,6 +1148,9 @@ body {
 
 .slider--content circle, .slider--content line {
   stroke: #fff; }
+
+.slider--content .wrap {
+  width: 100%; }
 
 .slider--content .item, .slider--content .list--work .item--full, .list--work .slider--content .item--full, .slider--content .list--work .item--half, .list--work .slider--content .item--half {
   min-height: 100vh;
@@ -1009,14 +1174,17 @@ body {
   font-weight: 400;
   line-height: 1;
   margin-bottom: 8rem;
-  margin-left: 6rem; }
+  margin-left: 6rem;
+  text-transform: uppercase; }
 
 .slider--content h3 {
   font-size: 6.7rem;
   font-family: "Molde-Semibold", sans-serif;
   font-weight: 400;
   line-height: 1;
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem;
+  font-size: 3.6rem;
+  padding-left: 3rem; }
 
 .slider--content p {
   font-size: 2.6rem;
@@ -1159,7 +1327,8 @@ body {
   right: 5rem;
   bottom: 8rem;
   cursor: pointer;
-  transition: all 0.15s ease-out; }
+  transition: all 0.15s ease-out;
+  transform: scale(0.7); }
   #goTop:hover polygon {
     fill: #ea094b; }
 
@@ -1211,20 +1380,28 @@ body {
     animation: poly11 6.6s linear normal forwards; }
 
 .paragraph--two-columns {
-  padding: 5.5rem 0; }
+  padding: 5.5rem 0;
+  color: #400099; }
   .paragraph--two-columns .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-  .paragraph--two-columns .content {
+  .paragraph--two-columns h2 {
+    font-size: 6.7rem;
+    font-family: "Molde-Semibold", sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 3.6rem;
+    padding-left: 0.75rem;
+    width: 100%; }
+  .paragraph--two-columns .content-text {
     display: flex;
     justify-content: center;
-    color: #400099;
     font-size: 2rem;
     font-family: "Molde-Light";
     max-width: 96rem;
     column-count: 2; }
-    .paragraph--two-columns .content p {
+    .paragraph--two-columns .content-text p {
       padding: 0 0.75rem; }
 
 .banner-with-text--overlay {

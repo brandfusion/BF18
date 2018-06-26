@@ -199,7 +199,7 @@ body
     span 
       display: block
       margin-bottom: 0.8rem
-#navigation--homepage, #navigation--project
+#navigation--anchor
   background-color: #fff
   position: relative 
   z-index: 99
@@ -221,8 +221,9 @@ body
     color: #a5acb1        
     &:hover, &.active 
       color: $primary
-#whyus,#personalbranding 
-  background-color: $gray
+// #whyus,#personalbranding 
+.paragraph--content  
+  // background-color: $gray
   padding: 16rem 8rem
   color: $primary
   h2 
@@ -231,6 +232,8 @@ body
     margin-left: 8rem
     margin-bottom: 6rem
     text-transform: uppercase
+  h3 
+    font-size: 3.6rem  
   .content 
     margin-left: 24rem  
     max-width: 66.4rem
@@ -239,13 +242,15 @@ body
   p:first-child
     font-size: 3.6rem
     font-family: "Molde-SemiCondensed-Bold"  
-  p:nth-child(2)
-    font-size: 2.6rem
-    font-family: "Molde-Regular"
-  p:nth-child(3)
-    font-size: 2rem
-    font-family: "Molde-Light"  
-#whatwedo
+  .content-text-featured  
+    p
+      font-size: 2.6rem
+      font-family: "Molde-Regular"
+  .content-text  
+    p
+      font-size: 2rem
+      font-family: "Molde-Light"  
+.paragraph--list
   padding: 16rem 8rem
   color: $primary
   h2 
@@ -255,7 +260,7 @@ body
     text-transform: uppercase
     margin-bottom: 6rem
   .content 
-    margin-left: 24rem  
+    margin-left: 27rem  
     max-width: 66.4rem
     display: flex
     flex-wrap: wrap
@@ -281,6 +286,8 @@ body
     fill: #ffffff
   circle, line 
     stroke: #fff  
+  .wrap
+    width: 100%  
   .item 
     min-height: 100vh
     background-position: center
@@ -302,12 +309,15 @@ body
     line-height: 1
     margin-bottom: 8rem
     margin-left: 6rem
+    text-transform: uppercase
   h3 
     font-size: 6.7rem
     font-family: "Molde-Semibold", sans-serif
     font-weight: 400  
     line-height: 1
     margin-bottom: 8rem
+    font-size: 3.6rem
+    padding-left: 3rem
   p 
     font-size: 2.6rem
     font-family: "Molde-Light", sans-serif   
@@ -447,6 +457,7 @@ body
   bottom: 8rem
   cursor: pointer
   transition: all 0.15s ease-out
+  transform: scale(0.7)
   &:hover 
     polygon 
       fill: $secondary
@@ -511,18 +522,29 @@ body
             // transform: rotateZ(240deg)    
 .paragraph--two-columns
   padding: 5.5rem 0
+  color: $primary
   .container
     display: flex 
     flex-wrap: wrap
     justify-content: center
-  .content 
+  h2 
+    font-size: 6.7rem
+    font-family: "Molde-Semibold", sans-serif
+    font-weight: 400  
+    line-height: 1
+    // margin-bottom: 8rem
+    font-size: 3.6rem
+    padding-left: 0.75rem        
+    width: 100%
+    // color: $primary
+  .content-text 
     display: flex
     justify-content: center
-    color: $primary
+    // color: $primary
     font-size: 2rem
     font-family: "Molde-Light"
     max-width: 96rem
-    column-count: 2          
+    column-count: 2        
     p 
       padding: 0 0.75rem   
 .banner-with-text--overlay
@@ -601,7 +623,7 @@ body
           display: block  
   #goTop
     right: 10px
-    padding: 0
+    padding: 0    
     svg
       width: 40px
 
