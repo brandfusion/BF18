@@ -12,7 +12,9 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="74px" viewBox="0 0 75 74" enable-background="new 0 0 75 74" xml:space="preserve"><circle fill="none" stroke="#E9004C" stroke-miterlimit="10" cx="37.597" cy="37.499" r="31.752"/><line fill="none" stroke="#E9004C" stroke-miterlimit="10" x1="50.104" y1="37.499" x2="30.23" y2="37.499"/><polygon fill="#E9004C" points="35.2,31.364 36.223,32.463 30.805,37.498 36.223,42.534 35.2,43.632 28.603,37.498 "/></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="74px" viewBox="0 0 75 74" enable-background="new 0 0 75 74" xml:space="preserve"><circle fill="none" stroke="#E9004C" stroke-miterlimit="10" cx="37.597" cy="37.499" r="31.752"/><line fill="none" stroke="#E9004C" stroke-miterlimit="10" x1="50.104" y1="37.499" x2="30.23" y2="37.499"/><polygon fill="#E9004C" points="35.2,31.364 36.223,32.463 30.805,37.498 36.223,42.534 35.2,43.632 28.603,37.498 "/></svg></button>'
   });
-
+  if ($("article.modifier--work").length > 0) {
+    $("body").addClass("modifier--work");
+  }
   $("#facts-slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $("#facts .loader").removeClass("animation");
   });

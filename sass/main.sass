@@ -339,9 +339,11 @@ body
   padding: 16rem 8rem
   color: $primary
   .content
-      display: flex
-      flex-wrap: wrap      
-      justify-content: space-between  
+    display: flex
+    flex-wrap: wrap      
+    justify-content: space-between  
+    max-width: 100%
+    margin: 0
   .overlay
     display: none
     position: absolute 
@@ -355,7 +357,9 @@ body
       height: 7rem
       align-items: center 
       justify-content: center 
-      margin-bottom: 1rem             
+      margin-bottom: 1rem   
+      &:hover 
+        background-color: $secondary          
   .item 
       width: calc(33.333330% - 10px)
       position: relative
@@ -390,6 +394,7 @@ body
     color: $primary
     font-size: 2rem
     font-family: "Molde-Light"
+    padding: 0
 #brands
   background-color: #a7acb2
   h2 
