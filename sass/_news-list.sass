@@ -1,6 +1,9 @@
 .articles
   img 
     width: 100%
+  .content 
+    p 
+      padding-left: 0  
     
 .articles
   .container
@@ -29,9 +32,11 @@
     width: 50%
 
 .articles
-  .item--half-top.outside-box
-    margin-top: -8rem
-
+  .item--half-top
+    width: calc(50% - 0.75rem);
+    &.outside-box
+      width: calc(50% + 0.75rem);
+      margin-top: -8rem
 .articles_header
   display: flex
   flex-wrap: wrap
